@@ -36,6 +36,7 @@ function generateTypeScriptCode(input) {
     let ankh_init = generate_ankh_init_ts();
 
     res = `
+  
     ${ankh_init}
     ${clone}
     ${toJSON}
@@ -45,7 +46,7 @@ function generateTypeScriptCode(input) {
     `
     document.querySelector("#result").value = res;
 
-    
+
 }
 
 function generateDartCode(input) {
@@ -72,6 +73,9 @@ function generateDartCode(input) {
     let ankh = generate_ankh_init(fields);
 
     res = `
+     // ignore_for_file: camel_case_types, non_constant_identifier_names, unnecessary_string_interpolations
+
+     
     ${constructor}
     ${init_state}
     ${ankh}

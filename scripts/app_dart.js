@@ -162,7 +162,7 @@ function init_state_var(fields, className) {
     }
 
     let res = `
-    static ${className} init = new ${className} (
+    static ${className} init =  ${className} (
         ${init_state_fields}
     );`;
     return res;
@@ -204,7 +204,7 @@ function generate_clone_dart(class_name, fields) {
     var c_item = "";
 
     for (const fieldItem of fields) {
-        c_item += `${fieldItem.label}:this.${fieldItem.label},\n`;
+        c_item += `${fieldItem.label}:${fieldItem.label},\n`;
     }
 
     let res = `
